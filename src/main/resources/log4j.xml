@@ -16,7 +16,7 @@
        </layout>
     </appender>
  
- <logger name="com.jwt.controller">
+ <logger name="com.rishab.java8streams.controller">
  	<level value="DEBUG"/>
  	<appender-ref ref="STDOUT" />
  	<appender-ref ref="FILEOUT" />

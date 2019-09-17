@@ -22,7 +22,7 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 		return sessionFactory.getCurrentSession().createQuery("from Employee").list();
 	}
 
-	@Override
+	/*@Override
 	public List<Employee> getAllEmployeeByBand(char band) {
 		return sessionFactory.getCurrentSession().createQuery("from Employee where band = "+band).list();
 	}
@@ -50,6 +50,6 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 			this.sessionFactory.getCurrentSession().delete(employee);
 		}
 		
-	}
+	}*/
 
 }

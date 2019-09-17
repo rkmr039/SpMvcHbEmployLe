@@ -8,7 +8,7 @@ public interface EmployeeDAO {
 
 	// SELECT
 	public List<Employee> getAllEmployee();
-	public List<Employee> getAllEmployeeByBand(char band);
+	/*public List<Employee> getAllEmployeeByBand(char band);
 	public Employee getEmployeeById(int empNo);
 	
 	// INSERT
@@ -18,6 +18,6 @@ public interface EmployeeDAO {
 	public Employee updateEmployee(Employee employee);
 	
 	// DELETE
-	public void deleteEmployee(int empNo);
+	public void deleteEmployee(int empNo);*/
 	
 }

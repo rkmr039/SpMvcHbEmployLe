@@ -2,6 +2,7 @@ package com.rishab.java8streams.model;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,8 @@ public class Employee {
 	private String empName;
 	private float salary;
 	private char band;
+	
+	@Column(name="dateOfJoin")
 	private Date dateOfJoin;
 	
 	
@@ -45,10 +48,10 @@ public class Employee {
 	public void setBand(char band) {
 		this.band = band;
 	}
-	public Date getDateofJoin() {
+	public Date getDateOfJoin() {
 		return dateOfJoin;
 	}
-	public void setDateofJoin(Date dateOfJoin) {
+	public void setDateOfJoin(Date dateOfJoin) {
 		this.dateOfJoin = dateOfJoin;
 	}
 	
