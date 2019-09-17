@@ -15,7 +15,7 @@
 		<form:form action="searchEmployee" method="POST" modelAttribute="searchEmployee">
 			Name:<form:input path="empName"/></br></br>
 			Band:<form:select path="band">
-				<option value="A">Select Any</option>
+				<option value="0">Select Any</option>
 				<option value="M">M</option>
 				<option value="E">E</option>
 				<option value="C">C</option>

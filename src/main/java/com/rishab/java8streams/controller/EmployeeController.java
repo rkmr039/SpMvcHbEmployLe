@@ -46,7 +46,7 @@ public class EmployeeController {
 		logger.debug(new Date() +"  : "+ this.getClass() + "  searchEmployee() " + " =========================");
 		
 		List<Employee> employeeList = employeeService.getAllEmployee();
-		employeeList = employeeList.stream().filter((var) -> ( searchEmployee.getBand() == 'A' || var.getBand() == searchEmployee.getBand())													  
+		employeeList = employeeList.stream().filter((var) -> ( searchEmployee.getBand() == '0' || var.getBand() == searchEmployee.getBand())													  
 				&& ( searchEmployee.getSalary() == 0.0 || var.getSalary() >= searchEmployee.getSalary())
 				&& (var.getEmpName().startsWith(searchEmployee.getEmpName())))
 															.collect(Collectors.toList());
