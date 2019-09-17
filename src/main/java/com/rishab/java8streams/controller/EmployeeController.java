@@ -44,12 +44,15 @@ public class EmployeeController {
 	@RequestMapping("/searchEmployee")
 	public ModelAndView searchEmployee(ModelAndView model, @ModelAttribute Employee searchEmployee) throws IOException {
 		logger.debug(new Date() +"  : "+ this.getClass() + "  searchEmployee() " + " =========================");
-		System.out.println("Search : "+searchEmployee.getEmpName());
+		
 		List<Employee> employeeList = employeeService.getAllEmployee();
-		employeeList = employeeList.stream().filter((var) -> var.getEmpName().startsWith(searchEmployee.getEmpName())).collect(Collectors.toList());
+		employeeList = employeeList.stream().filter((var) -> ( searchEmployee.getBand() == 'A' || var.getBand() == searchEmployee.getBand())													  
+				&& ( searchEmployee.getSalary() == 0.0 || var.getSalary() >= searchEmployee.getSalary())
+				&& (var.getEmpName().startsWith(searchEmployee.getEmpName())))
+															.collect(Collectors.toList());
 		logger.debug(new Date() +"  : "+ this.getClass() + "  searchEmployee() " + " Employee fetched : " + employeeList.size());
 		model.addObject("employeeList",employeeList);
-		model.addObject("searchEmployee",new Employee());
+		model.addObject("searchEmployee",searchEmployee);
 		model.setViewName("home");
 		logger.debug(new Date() +"  : "+ this.getClass() + "  searchEmployee() " + " redirecting to home.jsp");
 		return model;

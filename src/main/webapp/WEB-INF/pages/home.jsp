@@ -13,8 +13,15 @@
 		<h1>Employee List</h1>
 		
 		<form:form action="searchEmployee" method="POST" modelAttribute="searchEmployee">
-			Name:<form:input path="empName"/>
-			<input type="submit" value="Search"/> 
+			Name:<form:input path="empName"/></br></br>
+			Band:<form:select path="band">
+				<option value="A">Select Any</option>
+				<option value="M">M</option>
+				<option value="E">E</option>
+				<option value="C">C</option>
+			</form:select></br></br>
+			Salary Greater Then:<form:input path="salary" value="0.0"/> 
+			</br></br><input type="submit" value="Search"/> 
 		</form:form>  
 		<h1>No of Employees ${employeeList.size()}</h1>
 		<table border="1">
