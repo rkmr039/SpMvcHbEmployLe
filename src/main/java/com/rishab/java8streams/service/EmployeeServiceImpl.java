@@ -25,6 +25,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		logger.debug(new Date() +"  : "+ this.getClass() + "  getAllEmployee() " + " =========================");
 		return employeeDao.getAllEmployee();
 	}
+
 	
 	
 	

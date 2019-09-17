@@ -8,6 +8,7 @@ public interface EmployeeDAO {
 
 	// SELECT
 	public List<Employee> getAllEmployee();
+	
 	/*public List<Employee> getAllEmployeeByBand(char band);
 	public Employee getEmployeeById(int empNo);
 	
