@@ -17,7 +17,7 @@ public class Employee {
 	private String empName;
 	private float salary;
 	private char band;
-	private Date dateofJoin;
+	private Date dateOfJoin;
 	
 	
 	public int getEmpNo() {
@@ -46,10 +46,10 @@ public class Employee {
 		this.band = band;
 	}
 	public Date getDateofJoin() {
-		return dateofJoin;
+		return dateOfJoin;
 	}
-	public void setDateofJoin(Date dateofJoin) {
-		this.dateofJoin = dateofJoin;
+	public void setDateofJoin(Date dateOfJoin) {
+		this.dateOfJoin = dateOfJoin;
 	}
 	
 }
